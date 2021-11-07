@@ -38,7 +38,6 @@ test("displays all tasks when the 'All' button is clicked", () => {
   render(<App />);
 
   const allButton = screen.queryByRole("button", { name: "All" });
-
   fireEvent.click(allButton);
 
   expect(screen.queryByText("Build a todo app")).toBeInTheDocument();
